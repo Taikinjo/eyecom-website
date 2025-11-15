@@ -289,3 +289,51 @@ body {
   box-shadow: 0 4px 10px rgba(65, 191, 203, 0.12);
   cursor: zoom-in;
 }
+/* ================================
+   MOBILE TWEAKS
+   (phones & small tablets)
+================================ */
+@media (max-width: 768px) {
+  /* Container: give breathing room on sides */
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* Header: stack logo + nav so it doesn't squash */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .logo-area {
+    margin-bottom: 0.25rem;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .main-nav a {
+    margin-left: 0; /* remove desktop left margin */
+  }
+
+  /* Hero: a bit tighter on phone */
+  .hero {
+    padding: 2.5rem 0 3rem;
+    text-align: left;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  /* Buttons: stack verti*
