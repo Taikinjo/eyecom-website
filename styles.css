@@ -337,7 +337,7 @@ body {
   }
 
   /* Buttons: stack verti*
-  
+
 @media (max-width: 768px) {
   /* Menu images: full-width, stacked */
   .menu-image-grid {
@@ -347,5 +347,28 @@ body {
   /* Cancel the “center column” trick on small screens */
   .hbl-center {
     grid-column: auto;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .main-nav .nav-link {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    background-color: var(--turquoise);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .main-nav .nav-link:hover {
+    opacity: 0.9;
   }
 }
