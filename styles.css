@@ -19,7 +19,7 @@ body {
   line-height: 1.7;
 }
 
-/* CONTAINERS */
+/* CONTAINER */
 .container {
   width: min(1100px, 100% - 2rem);
   margin: auto;
@@ -34,7 +34,6 @@ body {
      top: 0;
      z-index: 100; */
 }
-
 
 .header-inner {
   display: flex;
@@ -56,22 +55,31 @@ body {
   color: var(--turquoise);
 }
 
+/* ABOUT LIST */
 .about-points {
-  list-style: none;        /* removes the default bullets */
-  padding-left: 0;         /* removes leftover indent */
+  list-style: none;
+  padding-left: 0;
   margin-left: 0;
 }
 
-/* HERO */
+/* HERO (default / PC) */
 .hero {
   padding: 3rem 0 4rem;
   text-align: center;
   background: #fff;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
 .hero-logo {
   width: 240px;
-  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-subtitle {
@@ -95,11 +103,13 @@ body {
   display: inline-block;
   font-size: 0.95rem;
   transition: 0.2s;
+  position: relative;
+  z-index: 3;
 }
 
 .btn-primary {
   background: var(--turquoise);
-  color: white;
+  color: #fff;
 }
 
 .btn-primary:hover {
@@ -119,6 +129,7 @@ body {
 /* SECTIONS */
 .section {
   padding: 3rem 0;
+  position: relative;
 }
 
 .section-light {
@@ -130,7 +141,7 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* MENU CARDS */
+/* SIMPLE CARDS (if still used) */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -139,12 +150,14 @@ body {
 }
 
 .card {
-  background: white;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   border: 1px solid #eee;
 }
+
+/* MENU IMAGE GRID */
 .menu-image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -152,66 +165,11 @@ body {
   margin-top: 1.5rem;
 }
 
-.menu-image-grid img {
+.menu-item {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-  background: #fff;
 }
 
-/* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-placeholder {
-  background: var(--turquoise-light);
-  padding: 3rem 0;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--text);
-}
-
-.hbl-center {
-  grid-column: 2 / 3; /* place in middle column */
-}
-
-/* FOOTER */
-.site-footer {
-  padding: 1rem 0;
-  text-align: center;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
-}
-.hero,
-.section {
-  position: relative;
-}
-
-.cta-buttons {
-  position: relative;
-  z-index: 2;
-}
-
-.btn {
-  position: relative;
-  z-index: 3;
-}
-/* ================================
-   MENU IMAGE GRID
-================================ */
-.menu-image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.menu-image-grid img {
+.menu-item img {
   width: 100%;
   height: auto;
   display: block;
@@ -220,58 +178,15 @@ body {
   background: #fff;
   border: 2px solid var(--turquoise-light);
   box-shadow: 0 4px 10px rgba(65, 191, 203, 0.12);
-  cursor: zoom-in; /* important for click-to-enlarge */
+  cursor: zoom-in;
 }
 
-/* Optional wrapper if you want */
-.menu-item {
-  width: 100%;
+/* Center HBL card on desktop */
+.hbl-center {
+  grid-column: 2 / 3;
 }
 
-
-/* ================================
-   LIGHTBOX (CLICK TO ENLARGE)
-================================ */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  display: none; /* hidden by default */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  cursor: zoom-out;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-
-/* ================================
-   OPTIONAL ANIMATION (smooth pop)
-================================ */
-.lightbox img {
-  animation: pop 0.18s ease-out;
-}
-
-@keyframes pop {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-/* ================================
-   BEFORE / AFTER GRID
-================================ */
+/* BEFORE / AFTER GRID */
 .before-after-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -289,97 +204,90 @@ body {
   box-shadow: 0 4px 10px rgba(65, 191, 203, 0.12);
   cursor: zoom-in;
 }
+
+/* GENERIC GALLERY (if used elsewhere) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-placeholder {
+  background: var(--turquoise-light);
+  padding: 3rem 0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* FOOTER */
+.site-footer {
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+/* LIGHTBOX (click-to-enlarge) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: pop 0.18s ease-out;
+}
+
+/* Lightbox animation */
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* ================================
-   MOBILE TWEAKS
-   (phones & small tablets)
+   MOBILE (≤ 768px)
 ================================ */
 @media (max-width: 768px) {
-  /* Logo Shrink */
-  .hero-logo {
-    max-width: 240px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  /*make buttons tighter*/
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .nav-link {
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 20px;
-  }
-}
-
-  .main-nav a {
-    margin-left: 0; /* remove desktop left margin */
-  }
-
-  /* Hero: a bit tighter on phone */
-  .hero {
-    padding: 2.5rem 0 3rem;
-    text-align: left;
-  }
-
-@media (max-width: 768px) {
-  /* Container: give breathing room on sides */
+  /* Container padding */
   .container {
     width: 100%;
     padding: 0 1rem;
   }
 
-  /* Header: stack logo + nav so it doesn't squash */
+  /* Header layout */
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .logo-area {
-    margin-bottom: 0.25rem;
-  }
-
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .hero-content {
-    align-items: flex-start;
-  }
-
-  .hero-logo {
-    max-width: 220px;
-  }
-
-  /* Buttons: stack verti*
-
-@media (max-width: 768px) {
-  /* Menu images: full-width, stacked */
-  .menu-image-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Cancel the “center column” trick on small screens */
-  .hbl-center {
-    grid-column: auto;
-  }
-}
-@media (max-width: 768px) {
   .main-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.75rem;
+  }
+
+  .main-nav a {
+    margin-left: 0; /* override desktop margin */
   }
 
   .main-nav .nav-link {
@@ -390,23 +298,51 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     border-radius: 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
   .main-nav .nav-link:hover {
     opacity: 0.9;
   }
-}
 
-@media (max-width: 768px) {
+  /* Hero tweaks */
   .hero {
-    padding: 30px 0;
+  padding: 2.5rem 0 3rem;
+  text-align: center;
+}
+
+.hero-content {
+  align-items: center;
+}
+
+  .hero-logo {
+    max-width: 220px;
+    margin: 0 auto;
   }
 
-  .hero-content {
-    gap: 10px;
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Grids: stack on mobile */
+  .menu-image-grid,
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cancel HBL centering on mobile */
+  .hbl-center {
+    grid-column: auto;
   }
 }
+
+/* Force light theme even in OS dark mode */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #ffffff !important;
