@@ -337,3 +337,15 @@ body {
   }
 
   /* Buttons: stack verti*
+  
+@media (max-width: 768px) {
+  /* Menu images: full-width, stacked */
+  .menu-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cancel the “center column” trick on small screens */
+  .hbl-center {
+    grid-column: auto;
+  }
+}
