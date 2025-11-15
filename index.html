@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eye+com. | マツエク・ラッシュリフト・HBL・光脱毛サロン</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo-area">
+          <img src="assets/banner.jpg" alt="Banner ロゴ" class="hero-logo" />
+        </div>
+        <nav class="main-nav">
+         <a href="#about">サロンについて</a>
+          <a href="#menu">メニュー</a>
+          <a href="#gallery">ビフォーアフター</a>
+          <a href="#access">アクセス</a>
+          <a
+            href="https://lin.ee/9qVDdK7"
+            target="_blank"
+            rel="noopener noreferrer">
+  予約
+</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <img src="assets/hero.jpg" class="hero-logo" alt="Hero ロゴ" />
+
+        <p class="hero-subtitle">
+          北谷 / マツエク・ラッシュリフト・HBL・光脱毛<br />
+          完全予約制のプライベートサロン
+        </p>
+
+        <div class="cta-buttons">
+          <a
+            href="https://lin.ee/9qVDdK7"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LINEで予約
+          </a>
+
+             <div class="cta-buttons">
+          <a
+            href="https://www.instagram.com/eye._plus._com?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Instagramを見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">サロンについて</h2>
+        <p>
+          Eye+com.は、北谷にあるマツエク・ラッシュリフト・HBL・光脱毛の
+          プライベートサロンです。シンプルで可愛い雰囲気のなかで、
+          お一人ずつ丁寧に施術を行っています。
+        </p>
+        <p>
+          完全予約制・不定休で、営業時間は<span>11:00〜21:00</span>。
+          お仕事帰りやお出かけ前にも通いやすいお時間帯でご案内しています。
+        </p>
+<br>
+        <ul class="about-points">
+          <li>❁ 完全予約制のプライベートサロン</li>
+          <li>❁ 不定休 / 11:00〜21:00</li>
+          <li>❁ ご予約はLINEまたはInstagramのDMから</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section section-light">
+      <div class="container">
+        <h2 class="section-title">メニュー</h2>
+        <p>詳細メニューは後で追加します。</p>
+
+        <div class="menu-image-grid">
+  <img src="assets/lashlift.png" class="clickable" />
+  <img src="assets/exte.png" class="clickable" />
+  <img src="assets/datsumo.png" class="clickable" />
+  <div class="menu-item hbl-center">
+  <img src="assets/hbl.jpg" class="clickable" />
+</div>
+
+</div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="before-after" class="section">
+  <div class="container">
+    <h2 class="section-title">ビフォーアフター</h2>
+
+    <div class="before-after-grid">
+      <img src="assets/B_A1.png" alt="Before After 1" class="clickable" />
+      <img src="assets/B_A2.png" alt="Before After 2" class="clickable" />
+      <img src="assets/B_A3.png" alt="Before After 3" class="clickable" />
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">ご予約・お問い合わせ</h2>
+        <p>ご予約はLINEまたはInstagramからお願いいたします。</p>
+
+        <div class="cta-buttons">
+          <a
+            href="https://lin.ee/9qVDdK7"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LINEで予約
+          </a>
+
+           <a
+            href="https://www.instagram.com/eye._plus._com?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Instagramを見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© Eye+com.</p>
+      </div>
+    </footer>
+    <p>
+      <a href="https://lin.ee/9qVDdK7" target="_blank"> 👉 テストLINEリンク </a>
+    </p>
+    <div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  document.querySelectorAll(".clickable").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+</script>
+</body>
+</html>
+
+  </body>
+</html>
