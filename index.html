@@ -15,18 +15,20 @@
         <div class="logo-area">
           <img src="assets/banner.jpg" alt="Banner ロゴ" class="hero-logo" />
         </div>
+
         <nav class="main-nav">
-         <nav class="main-nav">
           <a href="#about" class="nav-link">サロンについて</a>
           <a href="#menu" class="nav-link">メニュー</a>
           <a href="#gallery" class="nav-link">ビフォーアフター</a>
           <a href="#access" class="nav-link">アクセス</a>
           <a
             href="https://lin.ee/9qVDdK7"
+            class="nav-link"
             target="_blank"
-            rel="noopener noreferrer">
-  予約
-</a>
+            rel="noopener noreferrer"
+          >
+            予約
+          </a>
         </nav>
       </div>
     </header>
@@ -51,14 +53,13 @@
             LINEで予約
           </a>
 
-             <div class="cta-buttons">
           <a
             href="https://www.instagram.com/eye._plus._com?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
           >
-           Instagramを見る
+            Instagramを見る
           </a>
         </div>
       </div>
@@ -77,7 +78,7 @@
           完全予約制・不定休で、営業時間は<span>11:00〜21:00</span>。
           お仕事帰りやお出かけ前にも通いやすいお時間帯でご案内しています。
         </p>
-<br>
+        <br />
         <ul class="about-points">
           <li>❁ 完全予約制のプライベートサロン</li>
           <li>❁ 不定休 / 11:00〜21:00</li>
@@ -92,30 +93,37 @@
         <h2 class="section-title">メニュー</h2>
 
         <div class="menu-image-grid">
-  <img src="assets/lashlift.png" class="clickable" />
-  <img src="assets/exte.png" class="clickable" />
-  <img src="assets/datsumo.png" class="clickable" />
-  <div class="menu-item hbl-center">
-  <img src="assets/hbl.jpg" class="clickable" />
-</div>
+          <div class="menu-item">
+            <img src="assets/lashlift.png" class="clickable" />
+          </div>
 
-</div>
+          <div class="menu-item">
+            <img src="assets/exte.png" class="clickable" />
+          </div>
 
+          <div class="menu-item">
+            <img src="assets/datsumo.png" class="clickable" />
+          </div>
+
+          <div class="menu-item hbl-center">
+            <img src="assets/hbl.jpg" class="clickable" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- GALLERY -->
     <section id="before-after" class="section">
-  <div class="container">
-    <h2 class="section-title">ビフォーアフター</h2>
+      <div class="container">
+        <h2 class="section-title">ビフォーアフター</h2>
 
-    <div class="before-after-grid">
-      <img src="assets/B_A1.png" alt="Before After 1" class="clickable" />
-      <img src="assets/B_A2.png" alt="Before After 2" class="clickable" />
-      <img src="assets/B_A3.png" alt="Before After 3" class="clickable" />
-    </div>
-  </div>
-</section>
-
+        <div class="before-after-grid">
+          <img src="assets/B_A1.png" alt="Before After 1" class="clickable" />
+          <img src="assets/B_A2.png" alt="Before After 2" class="clickable" />
+          <img src="assets/B_A3.png" alt="Before After 3" class="clickable" />
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
@@ -133,13 +141,13 @@
             LINEで予約
           </a>
 
-           <a
+          <a
             href="https://www.instagram.com/eye._plus._com?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
           >
-           Instagramを見る
+            Instagramを見る
           </a>
         </div>
       </div>
@@ -155,25 +163,22 @@
       <a href="https://lin.ee/9qVDdK7" target="_blank"> 👉 テストLINEリンク </a>
     </p>
     <div id="lightbox" class="lightbox">
-  <img id="lightbox-img" src="" alt="">
-</div>
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll(".clickable").forEach(img => {
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
-    });
-  });
+      document.querySelectorAll(".clickable").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.src;
+        });
+      });
 
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-</script>
-</body>
-</html>
-
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+    </script>
   </body>
 </html>
