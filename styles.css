@@ -90,10 +90,28 @@ body {
 }
 
 /* BUTTONS */
-.cta-buttons {
+.line-buttons, .instagram-button {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+/* LINE button (bright green) */
+.btn-line {
+  background: #06C755; /* LINE official green */
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.btn-line:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 .btn {
@@ -328,7 +346,7 @@ body {
     margin: 0 auto;
   }
 
-  .cta-buttons {
+  .line-buttons, .instagram-button {
     flex-direction: column;
     align-items: stretch;
   }
