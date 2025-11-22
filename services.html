@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu | Eye+com. | マツエク・ラッシュリフト・HBL・光脱毛サロン</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="assets/banner.jpg" alt="Eye+ ロゴ" class="logo-img" />
+        </div>
+
+        <nav class="main-nav">
+          <a href="index.html" class="active">ホーム</a>
+          <a href="services.html">メニュー</a>
+          <a href="gallery.html">ギャラリー</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container services-page">
+      <h1 class="page-title">Menu</h1>
+
+      <!-- Visual Menu Only -->
+      <section class="service-section">
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="assets/lashlift.png"
+              class="clickable"
+              alt="Lash Lift Menu"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="assets/exte.png"
+              class="clickable"
+              alt="Extensions Menu"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/datsumo.png" class="clickable" alt="脱毛 Menu" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/hbl.jpg" class="clickable" alt="HBL Menu" />
+          </div>
+        </div>
+      </section>
+
+      <p class="contact-intro" style="margin-top: 1rem">
+        最新メニュー・料金は、LINEまたはInstagramにて随時更新しています。<br />
+        メニューが分からない場合は、お気軽にご相談ください。
+      </p>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">© Eye+com.</div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".clickable").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.src;
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
